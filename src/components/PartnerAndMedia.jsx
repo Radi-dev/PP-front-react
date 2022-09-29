@@ -9,7 +9,7 @@ export default function PartnerAndMedia() {
               <a href="#">
                 <img
                   className="media-img"
-                  src="../assets/images/media-img1.png"
+                  src="/src/assets/images/media-img1.png"
                   alt="media-img1"
                 />
               </a>
@@ -18,26 +18,7 @@ export default function PartnerAndMedia() {
               <a href="#">
                 <img
                   className="media-img"
-                  src="../assets/images/media-img2.png"
-                  alt="media-img1"
-                />
-              </a>
-            </div>
-
-            <div className="item">
-              <a href="#">
-                <img
-                  className="media-img"
-                  src="../assets/images/media-img3.png"
-                  alt="media-img1"
-                />
-              </a>
-            </div>
-            <div className="item">
-              <a href="#">
-                <img
-                  className="media-img"
-                  src="../assets/images/media-img1.png"
+                  src="/src/assets/images/media-img2.png"
                   alt="media-img1"
                 />
               </a>
@@ -47,7 +28,16 @@ export default function PartnerAndMedia() {
               <a href="#">
                 <img
                   className="media-img"
-                  src="../assets/images/media-img2.png"
+                  src="/src/assets/images/media-img3.png"
+                  alt="media-img1"
+                />
+              </a>
+            </div>
+            <div className="item">
+              <a href="#">
+                <img
+                  className="media-img"
+                  src="/src/assets/images/media-img1.png"
                   alt="media-img1"
                 />
               </a>
@@ -57,7 +47,17 @@ export default function PartnerAndMedia() {
               <a href="#">
                 <img
                   className="media-img"
-                  src="../assets/images/media-img3.png"
+                  src="/src/assets/images/media-img2.png"
+                  alt="media-img1"
+                />
+              </a>
+            </div>
+
+            <div className="item">
+              <a href="#">
+                <img
+                  className="media-img"
+                  src="/src/assets/images/media-img3.png"
                   alt="media-img1"
                 />
               </a>
@@ -66,13 +66,13 @@ export default function PartnerAndMedia() {
           {/* <!-- <div id="mediaSlider" className="dvslider">
                         <div className="MS-content">
                             <div className="item">
-                              <a href="#">  <img className="media-img" src="../assets/images/media-img1.png" alt="media-img1"> </a>
+                              <a href="#">  <img className="media-img" src="/src/assets/images/media-img1.png" alt="media-img1"> </a>
                             </div>
                             <div className="item">
-                                <a href="#"> <img className="media-img" src="../assets/images/media-img2.png" alt="media-img1"> </a>
+                                <a href="#"> <img className="media-img" src="/src/assets/images/media-img2.png" alt="media-img1"> </a>
                             </div>
                             <div className="item">
-                                <a href="#"> <img className="media-img" src="../assets/images/media-img3.png" alt="media-img1"> </a>
+                                <a href="#"> <img className="media-img" src="/src/assets/images/media-img3.png" alt="media-img1"> </a>
                             </div>
                         </div>
                     </div> --> */}

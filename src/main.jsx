@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import App from "./App";
-import "./index.css";
+// import "./index.css";
 // Import all of Bootstrap's JS
 import * as bootstrap from "bootstrap";
 // Import our custom CSS
