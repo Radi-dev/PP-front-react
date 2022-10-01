@@ -48,7 +48,7 @@ export function PreorderModal2() {
       <div
         className="modal booknow-modal-bottom fade"
         id="booknowModal"
-        tabindex="-1"
+        tabIndex="-1"
         role="dialog"
         aria-labelledby="booknowModal"
       >

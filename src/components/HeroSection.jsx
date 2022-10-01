@@ -29,30 +29,18 @@ export default function HeroSection() {
             <div
               id="hero-sliderSlidesOnly"
               className="carousel slide home_slider"
-              data-bs-ride="carousel"
+              data-ride="carousel"
             >
               <ol className="carousel-indicators">
                 <li
-                  data-bs-target="#hero-sliderSlidesOnly"
-                  data-bs-slide-to="0"
+                  data-target="#hero-sliderSlidesOnly"
+                  data-slide-to="0"
                   className="active"
                 ></li>
-                <li
-                  data-bs-target="#hero-sliderSlidesOnly"
-                  data-bs-slide-to="1"
-                ></li>
-                <li
-                  data-bs-target="#hero-sliderSlidesOnly"
-                  data-bs-slide-to="2"
-                ></li>
-                <li
-                  data-bs-target="#hero-sliderSlidesOnly"
-                  data-bs-slide-to="3"
-                ></li>
-                <li
-                  data-bs-target="#hero-sliderSlidesOnly"
-                  data-bs-slide-to="4"
-                ></li>
+                <li data-target="#hero-sliderSlidesOnly" data-slide-to="1"></li>
+                <li data-target="#hero-sliderSlidesOnly" data-slide-to="2"></li>
+                <li data-target="#hero-sliderSlidesOnly" data-slide-to="3"></li>
+                <li data-target="#hero-sliderSlidesOnly" data-slide-to="4"></li>
               </ol>
               <div className="carousel-inner">
                 <div className="carousel-item active">
@@ -94,28 +82,28 @@ export default function HeroSection() {
             </div>
             {/* <!-- <div id="hero-sliderSlidesOnly" className="carousel slide home_slider" data-ride="carousel">
                             <ol className="carousel-indicators">
-                                <li data-bs-target="#hero-sliderIndicators" data-bs-slide-to="0" className="active"></li>
-                                <li data-bs-target="#hero-sliderIndicators" data-bs-slide-to="1"></li>
-                                <li data-bs-target="#hero-sliderIndicators" data-bs-slide-to="2"></li>
-                                <li data-bs-target="#hero-sliderIndicators" data-bs-slide-to="3"></li>
-                                <li data-bs-target="#hero-sliderIndicators" data-bs-slide-to="4"></li>
-                                <li data-bs-target="#hero-sliderIndicators" data-bs-slide-to="4"></li>
+                                <li data-target="#hero-sliderIndicators" data-slide-to="0" className="active"></li>
+                                <li data-target="#hero-sliderIndicators" data-slide-to="1"></li>
+                                <li data-target="#hero-sliderIndicators" data-slide-to="2"></li>
+                                <li data-target="#hero-sliderIndicators" data-slide-to="3"></li>
+                                <li data-target="#hero-sliderIndicators" data-slide-to="4"></li>
+                                <li data-target="#hero-sliderIndicators" data-slide-to="4"></li>
                             </ol>
                             <div className="carousel-inner">
                                 <div className="carousel-item active">
-                                    <img className="d-block w-100" src="/src/assets/images/slider1.jpg" alt="slider1.jpg">
+                                    <img className="d-block w-100" src="/src/assets/images/slider1.jpg" alt="slider1.jpg"/>
                                 </div>
                                 <div className="carousel-item">
-                                    <img className="d-block w-100" src="/src/assets/images/slider2.jpg" alt="slider2.jpg">
+                                    <img className="d-block w-100" src="/src/assets/images/slider2.jpg" alt="slider2.jpg"/>
                                 </div>
                                 <div className="carousel-item">
-                                    <img className="d-block w-100" src="/src/assets/images/slider1.jpg" alt="slider1.jpg">
+                                    <img className="d-block w-100" src="/src/assets/images/slider1.jpg" alt="slider1.jpg"/>
                                 </div>
                                 <div className="carousel-item">
-                                    <img className="d-block w-100" src="/src/assets/images/slider2.jpg" alt="slider2.jpg">
+                                    <img className="d-block w-100" src="/src/assets/images/slider2.jpg" alt="slider2.jpg"/>
                                 </div>
                                 <div className="carousel-item">
-                                    <img className="d-block w-100" src="/src/assets/images/slider1.jpg" alt="slider1.jpg">
+                                    <img className="d-block w-100" src="/src/assets/images/slider1.jpg" alt="slider1.jpg"/>
                                 </div>
                             </div>
                         </div> --> */}

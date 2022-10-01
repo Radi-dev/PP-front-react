@@ -1,6 +1,6 @@
 function CategoriesSection() {
   return (
-    <section className="categoires_wrapper mt-3 mb-3 d-lg-block">
+    <section className="categoires_wrapper mt-3 mb-3  d-lg-block">
       <div className="container">
         <div id="categoires-bg">
           <div className="row">

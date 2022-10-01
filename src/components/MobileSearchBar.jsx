@@ -4,7 +4,7 @@ export default function MobileSearchBar() {
       <div
         className="modal modal-full fade search-modal-bg show"
         id="search-modal"
-        tabindex="-1"
+        tabIndex="-1"
         role="dialog"
         aria-labelledby="search-modal"
         aria-modal="true"

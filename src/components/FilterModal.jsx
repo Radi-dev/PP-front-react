@@ -3,7 +3,7 @@ function FilterModal() {
     <div
       className="modal modal-full fade fillter-modal-bg"
       id="fillter-modal"
-      tabindex="-1"
+      tabIndex="-1"
       role="dialog"
       aria-labelledby="fillter-modal"
     >
