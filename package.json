@@ -1,5 +1,6 @@
 {
   "name": "pp-task-react",
+  "homepage": "https://pricepally-react.netlify.app",
   "private": true,
   "version": "0.0.0",
   "type": "module",
