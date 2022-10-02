@@ -192,8 +192,15 @@ function FoodItemsSection() {
 
                                   <div className="pally-content">
                                     <a href="#" className="inner-head">
-                                      <h5 className="mb-2">
-                                        {food.product_name}{" "}
+                                      <h5
+                                        className="mb-2 w-100"
+                                        style={{
+                                          whiteSpace: "nowrap",
+                                          overflow: "hidden",
+                                          textOverflow: "ellipsis",
+                                        }}
+                                      >
+                                        {food.product_name}
                                       </h5>
                                     </a>
                                     <a href="#" className="green-bg">
@@ -218,83 +225,85 @@ function FoodItemsSection() {
                                       </s>
                                     </h5>
                                     <section className="rating-widget">
-                                <div
-                                  className="rating-main pro-detail-star"
-                                  data-vote="0"
-                                >
-                                  <div className="mainstar hidden">
-                                    <span
-                                      className="full"
-                                      data-value="0"
-                                    ></span>
-                                    <span
-                                      className="half"
-                                      data-value="0"
-                                    ></span>
-                                  </div>
-                                  <div className="star">
-                                    <span
-                                      className="full"
-                                      data-value="1"
-                                    ></span>
-                                    <span
-                                      className="half"
-                                      data-value="0.5"
-                                    ></span>
-                                    <span className="selected"></span>
-                                  </div>
-                                  <div className="star">
-                                    <span
-                                      className="full"
-                                      data-value="2"
-                                    ></span>
-                                    <span
-                                      className="half"
-                                      data-value="1.5"
-                                    ></span>
-                                    <span className="selected"></span>
-                                  </div>
+                                      <div
+                                        className="rating-main pro-detail-star"
+                                        data-vote="0"
+                                      >
+                                        <div className="mainstar hidden">
+                                          <span
+                                            className="full"
+                                            data-value="0"
+                                          ></span>
+                                          <span
+                                            className="half"
+                                            data-value="0"
+                                          ></span>
+                                        </div>
+                                        <div className="star">
+                                          <span
+                                            className="full"
+                                            data-value="1"
+                                          ></span>
+                                          <span
+                                            className="half"
+                                            data-value="0.5"
+                                          ></span>
+                                          <span className="selected"></span>
+                                        </div>
+                                        <div className="star">
+                                          <span
+                                            className="full"
+                                            data-value="2"
+                                          ></span>
+                                          <span
+                                            className="half"
+                                            data-value="1.5"
+                                          ></span>
+                                          <span className="selected"></span>
+                                        </div>
 
-                                  <div className="star">
-                                    <span
-                                      className="full"
-                                      data-value="3"
-                                    ></span>
-                                    <span
-                                      className="half"
-                                      data-value="2.5"
-                                    ></span>
-                                    <span className="selected"></span>
-                                  </div>
+                                        <div className="star">
+                                          <span
+                                            className="full"
+                                            data-value="3"
+                                          ></span>
+                                          <span
+                                            className="half"
+                                            data-value="2.5"
+                                          ></span>
+                                          <span className="selected"></span>
+                                        </div>
 
-                                  <div className="star">
-                                    <span
-                                      className="full"
-                                      data-value="4"
-                                    ></span>
-                                    <span
-                                      className="half"
-                                      data-value="3.5"
-                                    ></span>
-                                    <span className="selected"></span>
-                                  </div>
+                                        <div className="star">
+                                          <span
+                                            className="full"
+                                            data-value="4"
+                                          ></span>
+                                          <span
+                                            className="half"
+                                            data-value="3.5"
+                                          ></span>
+                                          <span className="selected"></span>
+                                        </div>
 
-                                  <div className="star">
-                                    <span
-                                      className="full"
-                                      data-value="5"
-                                    ></span>
-                                    <span
-                                      className="half"
-                                      data-value="4.5"
-                                    ></span>
-                                    <span className="selected"></span>
-                                  </div>
-                                </div>
-                                <div className="success-box">
-                                  <div className="text-message"></div>
-                                </div>
-                              </section>
+                                        <div className="star">
+                                          <span
+                                            className="full"
+                                            data-value="5"
+                                          ></span>
+                                          <span
+                                            className="half"
+                                            data-value="4.5"
+                                          ></span>
+                                          <span className="selected"></span>
+                                        </div>
+                                      </div>
+                                      <div className="success-box">
+                                        <div className="text-message">
+                                          (4.5/5.0)
+                                        </div>
+                                      </div>
+                                    </section>
                                     <a href="#">
                                       <button
                                         type="button"
