@@ -30,7 +30,7 @@ export default function HeaderComponent() {
                           </div>
                           <button className="yellow-bg">SEARCH</button>
                         </div>
-                        <div className="search-dropdown" id="scrolling">
+                        <div className="search-dropdown hidden" id="scrolling">
                           <div className="search-items">
                             <h6 className="grey-text">FOOD ITEMS</h6>
                             <ul className="list-unstyled mb-3">

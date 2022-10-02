@@ -14,35 +14,35 @@ export default function FoodItemsMobileSection({
   },
   ...props
 }) {
-  useEffect(() => {
-    console.log("added scroll");
-    window.addEventListener("scroll", () => {
-      // console.log(window.scrollY); //scrolled from top
-      // console.log(window.innerHeight); //visible part of screen
-      console.log(
-        window.scrollY + window.innerHeight,
-        document.documentElement.scrollHeight,
-        window.scrollY + window.innerHeight >=
-          document.documentElement.scrollHeight
-      ); //visible part of screen
-      if (
-        window.scrollY + window.innerHeight >=
-        document.documentElement.scrollHeight
-      ) {
-        fetching ? console.log("still fetching") : getRecommendedProducts();
-      }
-    });
-    if (!isMobile) {
-      window.removeEventListener("scroll", () => {
-        console.log("removed scroll");
-      });
-    }
-    return () => {
-      window.removeEventListener("scroll", () => {
-        console.log("removed scroll");
-      });
-    };
-  });
+  // useEffect(() => {
+  //   console.log("added scroll");
+  //   window.addEventListener("scroll", () => {
+  //     // console.log(window.scrollY); //scrolled from top
+  //     // console.log(window.innerHeight); //visible part of screen
+  //     console.log(
+  //       window.scrollY + window.innerHeight,
+  //       document.documentElement.scrollHeight,
+  //       window.scrollY + window.innerHeight >=
+  //         document.documentElement.scrollHeight
+  //     ); //visible part of screen
+  //     if (
+  //       window.scrollY + window.innerHeight >=
+  //       document.documentElement.scrollHeight
+  //     ) {
+  //       fetching ? console.log("still fetching") : getRecommendedProducts();
+  //     }
+  //   });
+  //   if (!isMobile) {
+  //     window.removeEventListener("scroll", () => {
+  //       console.log("removed scroll");
+  //     });
+  //   }
+  //   return () => {
+  //     window.removeEventListener("scroll", () => {
+  //       console.log("removed scroll");
+  //     });
+  //   };
+  // });
 
   return (
     <div className="fixed-food">

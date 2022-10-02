@@ -12,13 +12,13 @@ function FoodItemsSection() {
   const [fetching, setFetching] = useState(false);
   const isMobile = useMediaQuery({ query: `(max-width: 991px)` });
   const getRecommendedProducts = () => {
-    console.log("getting prods", offset);
+    // console.log("getting prods", offset);
     setFetching(true);
     const _payload = { offset: offset, user_id: "x" };
     return AxiosPost(conf.base_url + "/GetRecommendedProducts", _payload, {
       region: conf.region,
     }).then((res) => {
-      console.log("dataaa", res);
+      // console.log("data", res);
       setFoodItems([...foodItems, ...res?.data?.recommendedproducts]);
       setFetching(false);
       setItemsCountTotal(res?.data?.total_products);
@@ -34,9 +34,9 @@ function FoodItemsSection() {
     getRecommendedProducts();
   }, []);
   useEffect(() => {
-    console.log("offset lent", offset);
+    // console.log("offset length", offset);
     setOffset(foodItems.length);
-    console.log("offset new lent", offset);
+    // console.log("offset new lenhth", offset);
   }, [foodItems]);
 
   return (

@@ -1,3 +1,6 @@
+import OwlCarousel from "react-owl-carousel";
+import "owl.carousel/dist/assets/owl.carousel.css";
+import "owl.carousel/dist/assets/owl.theme.default.css";
 function CategoriesSection() {
   return (
     <section className="categoires_wrapper mt-3 mb-3  d-lg-block">
@@ -14,7 +17,25 @@ function CategoriesSection() {
             </div>
           </div>
           <div id="folloersSlider" className="dvslider">
-            <div className="owl-carousel owl-theme">
+            {/* <div className="owl-carousel owl-theme"> */}
+
+            <OwlCarousel
+              className="owl-theme"
+              loop
+              margin={10}
+              nav
+              responsive={{
+                0: {
+                  items: 2.5,
+                },
+                600: {
+                  items: 3,
+                },
+                1000: {
+                  items: 4,
+                },
+              }}
+            >
               <div className="item">
                 <div className="followers-inner">
                   <a href="listing.html">
@@ -50,7 +71,7 @@ function CategoriesSection() {
                   </a>
                 </div>
               </div>
-            </div>
+            </OwlCarousel>
           </div>
         </div>
       </div>
