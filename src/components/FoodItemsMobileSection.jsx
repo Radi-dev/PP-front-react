@@ -329,12 +329,21 @@ export default function FoodItemsMobileSection({
                     role="tabpanel"
                     aria-labelledby="mobile-recommended-tab"
                   >
+                    {!itemsCountTotal ? (
+                      <h6 className="inner-head mb-3 mt-3">
+                        Fetching Available Deals
+                      </h6>
+                    ) : (
+                      <h6 className="inner-head mb-3 mt-3">
+                        {itemsCountTotal} Available Deals
+                      </h6>
+                    )}
                     <InfiniteScroll
                       dataLength={itemsCountTotal} //This is important field to render the next data
                       next={getRecommendedProducts}
                       hasMore={itemsCountTotal > foodItems.length}
                       loader={
-                        "hhh"
+                        "..."
                         // <div className="load-bg text-center mb-5 d-none d-lg-block">
                         //   <a href="#">
                         //     <button
