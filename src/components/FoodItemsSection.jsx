@@ -3,6 +3,7 @@ import conf from "../config.json";
 import { useEffect, useState } from "react";
 import Shimmer from "react-js-loading-shimmer";
 import { useMediaQuery } from "react-responsive";
+import ReactStars from "react-rating-stars-component";
 
 import FoodItemsMobileSection from "./FoodItemsMobileSection";
 function FoodItemsSection() {
@@ -224,7 +225,7 @@ function FoodItemsSection() {
                                           : ""}
                                       </s>
                                     </h5>
-                                    <section className="rating-widget">
+                                    {/* <section className="rating-widget">
                                       <div
                                         className="rating-main pro-detail-star"
                                         data-vote="0"
@@ -303,7 +304,27 @@ function FoodItemsSection() {
                                           (4.5/5.0)
                                         </div>
                                       </div>
-                                    </section>
+                                    </section> */}
+                                    {parseFloat(food.product_rating) > 0 ? (
+                                      <section className="rating-widget mb-2">
+                                        <ReactStars
+                                          size={18}
+                                          isHalf={true}
+                                          value={parseFloat(
+                                            food.product_rating
+                                          )}
+                                          edit={false}
+                                        />
+
+                                        <div className="success-box">
+                                          <div className="text-message">
+                                            ({food.product_rating}/5.0)
+                                          </div>
+                                        </div>
+                                      </section>
+                                    ) : (
+                                      "No ratings yet"
+                                    )}
                                     <a href="#">
                                       <button
                                         type="button"

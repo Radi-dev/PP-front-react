@@ -1,15 +1,13 @@
 import { useEffect } from "react";
 import Shimmer from "react-js-loading-shimmer";
 import InfiniteScroll from "react-infinite-scroll-component";
+import ReactStars from "react-rating-stars-component";
 
 export default function FoodItemsMobileSection({
   foodItems = [],
   itemsCountTotal = 0,
   fetching = false,
   isMobile = false,
-  // setFetching = () => {
-  //   console.log("setFetching callback");
-  // },
   getRecommendedProducts = () => {
     console.log("getRecommendedProducts callback");
   },
@@ -33,18 +31,34 @@ export default function FoodItemsMobileSection({
   //       fetching ? console.log("still fetching") : getRecommendedProducts();
   //     }
   //   });
-  //   if (!isMobile) {
-  //     window.removeEventListener("scroll", () => {
-  //       console.log("removed scroll");
-  //     });
-  //   }
   //   return () => {
   //     window.removeEventListener("scroll", () => {
   //       console.log("removed scroll");
   //     });
   //   };
   // });
+  const loadingPlaceholder = [...Array(4)].map((item) => (
+    <div className="d-flex mobile-product w-75" key={item}>
+      <div className=" justify-content-start w-50">
+        <div className="pally-inner w-100">
+          <Shimmer className={"class_name_test h-100 product-img w-100"} />
+        </div>
+      </div>
 
+      <div className=" ml-2 justify-content-end">
+        <div className="pally-content">
+          <Shimmer />
+          <Shimmer className={"w-50 "} />
+          {/* <Shimmer /> */}
+          <Shimmer className={"w-75 "} />
+          <Shimmer />
+          <div style={{ height: "2rem" }}>
+            <Shimmer className={"h-100 w-85"} />
+          </div>
+        </div>
+      </div>
+    </div>
+  ));
   return (
     <div className="fixed-food">
       <section className="food-items-bg  d-block d-lg-none mobilefoodTab-view">
@@ -330,9 +344,7 @@ export default function FoodItemsMobileSection({
                     aria-labelledby="mobile-recommended-tab"
                   >
                     {!itemsCountTotal ? (
-                      <h6 className="inner-head mb-3 mt-3">
-                        Fetching Available Deals
-                      </h6>
+                      loadingPlaceholder
                     ) : (
                       <h6 className="inner-head mb-3 mt-3">
                         {itemsCountTotal} Available Deals
@@ -342,69 +354,8 @@ export default function FoodItemsMobileSection({
                       dataLength={foodItems.length} //This is important field to render the next data
                       next={getRecommendedProducts}
                       hasMore={itemsCountTotal > foodItems.length}
-                      loader={
-                        [...Array(4)].map((item) => (
-                          <div
-                            className="d-flex mobile-product w-75"
-                            key={item}
-                          >
-                            <div className=" justify-content-start w-50">
-                              <div className="pally-inner w-100">
-                                <Shimmer
-                                  className={
-                                    "class_name_test h-100 product-img w-100"
-                                  }
-                                />
-                              </div>
-                            </div>
-
-                            <div className=" ml-2 justify-content-end">
-                              <div className="pally-content">
-                                <Shimmer />
-                                <Shimmer className={"w-50 "} />
-                                {/* <Shimmer /> */}
-                                <Shimmer className={"w-75 "} />
-                                <Shimmer />
-                                <div style={{ height: "2rem" }}>
-                                  <Shimmer className={"h-100 w-85"} />
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-
-                          // <div key={item} className="col-md-6 col-lg-3">
-                          //   <div className="pally-inner ">
-                          //     <Shimmer
-                          //       className={
-                          //         "class_name_test h-100 product-img mb3"
-                          //       }
-                          //     />
-                          //   </div>
-                          // </div>
-                        ))
-                        // <div className="load-bg text-center mb-5 d-none d-lg-block">
-                        //   <a href="#">
-                        //     <button
-                        //       typ="button"
-                        //       className="load-more text-uppercase "
-                        //     >
-                        //       Load more items
-                        //     </button>
-                        //   </a>
-                        // </div>
-                      }
+                      loader={loadingPlaceholder}
                       endMessage={""}
-                      // below props only if you need pull down functionality
-
-                      // refreshFunction={this.refresh}
-                      // pullDownToRefresh
-                      // pullDownToRefreshThreshold={50}
-                      // pullDownToRefreshContent={
-                      //   <h3 style={{ textAlign: 'center' }}>&#8595; Pull down to refresh</h3>
-                      // }
-                      // releaseToRefreshContent={
-                      //   <h3 style={{ textAlign: 'center' }}>&#8593; Release to refresh</h3>
-                      // }
                     >
                       {foodItems.map((food, i) => (
                         <div className="d-flex mobile-product" key={i}>
@@ -451,7 +402,7 @@ export default function FoodItemsMobileSection({
                                     : ""}
                                 </s>
                               </h5>
-                              <section className="rating-widget mb-2">
+                              {/* <section className="rating-widget mb-2">
                                 <div
                                   className="rating-main pro-detail-star"
                                   data-vote="0"
@@ -528,7 +479,25 @@ export default function FoodItemsMobileSection({
                                 <div className="success-box">
                                   <div className="text-message">(4.5/5.0)</div>
                                 </div>
-                              </section>
+                              </section> */}
+                              {parseFloat(food.product_rating) > 0 ? (
+                                <section className="rating-widget mb-2">
+                                  <ReactStars
+                                    size={18}
+                                    isHalf={true}
+                                    value={parseFloat(food.product_rating)}
+                                    edit={false}
+                                  />
+
+                                  <div className="success-box">
+                                    <div className="text-message">
+                                      ({food.product_rating}/5.0)
+                                    </div>
+                                  </div>
+                                </section>
+                              ) : (
+                                "No ratings yet"
+                              )}
                               <a href="#">
                                 <button
                                   type="button"

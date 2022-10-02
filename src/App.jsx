@@ -1,6 +1,8 @@
 import { useState } from "react";
 // import "./App.css";
-import HeaderComponent from "./components/HeaderComponent";
+import HeaderComponent, {
+  HeaderComponentMobile,
+} from "./components/HeaderComponent";
 import HeroSection from "./components/HeroSection";
 import CategoriesSection from "./components/CategoriesSection";
 import FoodItemsSection from "./components/FoodItemsSection";
@@ -18,10 +20,10 @@ function App() {
   return (
     <div className="App">
       <HeaderComponent />
+      <HeaderComponentMobile />
       <HeroSection />
       <CategoriesSection />
       <FoodItemsSection />
-      {/* <FoodItemsMobileSection /> */}
       <PartnerAndMedia />
       <DownloadAppSection />
       <DownloadBottomSection />
