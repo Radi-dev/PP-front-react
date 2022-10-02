@@ -91,19 +91,19 @@ export default function HeroSection() {
                             </ol>
                             <div className="carousel-inner">
                                 <div className="carousel-item active">
-                                    <img className="d-block w-100" src="/assets/images/slider1.jpg" alt="slider1.jpg"/>
+                                    <img className="d-block w-100" src="/assets/images/slider1.jpg" alt="slider1.jpg">
                                 </div>
                                 <div className="carousel-item">
-                                    <img className="d-block w-100" src="/assets/images/slider2.jpg" alt="slider2.jpg"/>
+                                    <img className="d-block w-100" src="/assets/images/slider2.jpg" alt="slider2.jpg">
                                 </div>
                                 <div className="carousel-item">
-                                    <img className="d-block w-100" src="/assets/images/slider1.jpg" alt="slider1.jpg"/>
+                                    <img className="d-block w-100" src="/assets/images/slider1.jpg" alt="slider1.jpg">
                                 </div>
                                 <div className="carousel-item">
-                                    <img className="d-block w-100" src="/assets/images/slider2.jpg" alt="slider2.jpg"/>
+                                    <img className="d-block w-100" src="/assets/images/slider2.jpg" alt="slider2.jpg">
                                 </div>
                                 <div className="carousel-item">
-                                    <img className="d-block w-100" src="/assets/images/slider1.jpg" alt="slider1.jpg"/>
+                                    <img className="d-block w-100" src="/assets/images/slider1.jpg" alt="slider1.jpg">
                                 </div>
                             </div>
                         </div> --> */}
