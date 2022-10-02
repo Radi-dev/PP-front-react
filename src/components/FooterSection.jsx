@@ -102,16 +102,16 @@ function FooterSection() {
             <ul className="list-unstyled social-icons">
               <li className="d-inline-block">
                 <a href="#">
-                  <img src="/src/assets/images/facebook.svg" width="25px" />
+                  <img src="/assets/images/facebook.svg" width="25px" />
                 </a>
                 <a href="#">
-                  <img src="/src/assets/images/instagram.svg" width="25px" />
+                  <img src="/assets/images/instagram.svg" width="25px" />
                 </a>
                 <a href="#">
-                  <img src="/src/assets/images/twitter.svg" width="25px" />
+                  <img src="/assets/images/twitter.svg" width="25px" />
                 </a>
                 <a href="#">
-                  <img src="/src/assets/images/youtube.svg" width="25px" />
+                  <img src="/assets/images/youtube.svg" width="25px" />
                 </a>
               </li>
             </ul>

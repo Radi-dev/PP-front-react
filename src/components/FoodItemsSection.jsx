@@ -312,7 +312,7 @@ function FoodItemsSection() {
                             </div>
                             <img
                               className=" product-img mb-3"
-                              src="/src/assets/images/Product-img1.jpg"
+                              src="/assets/images/Product-img1.jpg"
                               alt="Product-img1"
                             />
                           </a>
@@ -339,28 +339,28 @@ function FoodItemsSection() {
                             <li className="d-inline-block pally-left">
                               <img
                                 className="list-img"
-                                src="/src/assets/images/list-img1.jpg"
+                                src="/assets/images/list-img1.jpg"
                                 alt="list-img1"
                               />
                             </li>
                             <li className="d-inline-block pally-left">
                               <img
                                 className="list-img"
-                                src="/src/assets/images/list-img3.jpg"
+                                src="/assets/images/list-img3.jpg"
                                 alt="list-img2"
                               />
                             </li>
                             <li className="d-inline-block pally-left">
                               <img
                                 className="list-img"
-                                src="/src/assets/images/list-img3.jpg"
+                                src="/assets/images/list-img3.jpg"
                                 alt="list-img3"
                               />
                             </li>
                             <li className="d-inline-block pally-left">
                               <img
                                 className="list-img"
-                                src="/src/assets/images/list-img1.jpg"
+                                src="/assets/images/list-img1.jpg"
                                 alt="list-img1"
                               />
                             </li>
@@ -391,7 +391,7 @@ function FoodItemsSection() {
                             </div>
                             <img
                               className="mb-3 product-img"
-                              src="/src/assets/images/Product-img6.png"
+                              src="/assets/images/Product-img6.png"
                               alt="Product-img6"
                             />
                           </a>
@@ -475,7 +475,7 @@ function FoodItemsSection() {
                             </div>
                             <img
                               className="mb-3 product-img"
-                              src="/src/assets/images/Product-img3.png"
+                              src="/assets/images/Product-img3.png"
                               alt="Product-img1"
                             />
                           </a>
@@ -560,7 +560,7 @@ function FoodItemsSection() {
                             </div>
                             <img
                               className="mb-3 product-img"
-                              src="/src/assets/images/Product-img4.png"
+                              src="/assets/images/Product-img4.png"
                               alt="Product-img1"
                             />
                           </a>
@@ -644,7 +644,7 @@ function FoodItemsSection() {
                             </div>
                             <img
                               className="mb-3 product-img"
-                              src="/src/assets/images/Product-img5.png"
+                              src="/assets/images/Product-img5.png"
                               alt="Product-img1"
                             />
                           </a>
@@ -727,7 +727,7 @@ function FoodItemsSection() {
                             </div>
                             <img
                               className="mb-3 product-img"
-                              src="/src/assets/images/Product-img6.png"
+                              src="/assets/images/Product-img6.png"
                               alt="Product-img1"
                             />
                           </a>
@@ -822,7 +822,7 @@ function FoodItemsSection() {
                             </div>
                             <img
                               className="mb-3 product-img"
-                              src="/src/assets/images/Pre-order1.png"
+                              src="/assets/images/Pre-order1.png"
                               alt="Pre-order1"
                             />
                           </a>
@@ -878,7 +878,7 @@ function FoodItemsSection() {
                             </div>
                             <img
                               className="mb-3 product-img"
-                              src="/src/assets/images/Pre-order2.png"
+                              src="/assets/images/Pre-order2.png"
                               alt="Pre-order2"
                             />
                           </a>
@@ -931,7 +931,7 @@ function FoodItemsSection() {
                             </div>
                             <img
                               className="mb-3 product-img"
-                              src="/src/assets/images/Pre-order3.png"
+                              src="/assets/images/Pre-order3.png"
                               alt="Product-img3"
                             />
                           </a>

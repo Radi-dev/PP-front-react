@@ -9,15 +9,12 @@ function DownloadAddSection() {
               <ul className="list-unstyled">
                 <li className="d-inline-block">
                   <a href="#">
-                    <img src="/src/assets/images/appstore.png" alt="appstore" />
+                    <img src="/assets/images/appstore.png" alt="appstore" />
                   </a>
                 </li>
                 <li className="d-inline-block">
                   <a href="#">
-                    <img
-                      src="/src/assets/images/playstore.png"
-                      alt="appstore"
-                    />
+                    <img src="/assets/images/playstore.png" alt="appstore" />
                   </a>
                 </li>
               </ul>
@@ -26,7 +23,7 @@ function DownloadAddSection() {
           <div className="col-lg-8">
             <div className="download-img">
               <img
-                src="/src/assets/images/download_mobile.png"
+                src="/assets/images/download_mobile.png"
                 alt="download-img"
               />
             </div>

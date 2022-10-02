@@ -7,7 +7,7 @@ function DownloadBottomSection() {
             <div className="row">
               <div className="col-lg-3 mt-2">
                 <img
-                  src="/src/assets/images/dedicated-icon.svg"
+                  src="/assets/images/dedicated-icon.svg"
                   width="60px"
                   height="60px"
                 />
@@ -22,7 +22,7 @@ function DownloadBottomSection() {
             <div className="row">
               <div className="col-lg-3 mt-2">
                 <img
-                  src="/src/assets/images/return_icon.svg"
+                  src="/assets/images/return_icon.svg"
                   width="60px"
                   height="60px"
                 />
@@ -37,7 +37,7 @@ function DownloadBottomSection() {
             <div className="row">
               <div className="col-lg-3 mt-2">
                 <img
-                  src="/src/assets/images/online-icon.png"
+                  src="/assets/images/online-icon.png"
                   width="60px"
                   height="60px"
                 />

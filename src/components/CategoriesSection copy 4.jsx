@@ -18,35 +18,35 @@ function App() {
               <div className="item">
                 <div className="followers-inner">
                   <a href="listing.html">
-                    <img src="/src/assets/images/foodstuff-img.png" />
+                    <img src="/assets/images/foodstuff-img.png" />
                   </a>
                 </div>
               </div>
               <div className="item">
                 <div className="followers-inner">
                   <a href="listing.html">
-                    <img src="/src/assets/images/packfood_img.png" />
+                    <img src="/assets/images/packfood_img.png" />
                   </a>
                 </div>
               </div>
               <div className="item">
                 <div className="followers-inner">
                   <a href="listing.html">
-                    <img src="/src/assets/images/fruits-img.png" />
+                    <img src="/assets/images/fruits-img.png" />
                   </a>
                 </div>
               </div>
               <div className="item">
                 <div className="followers-inner">
                   <a href="listing.html">
-                    <img src="/src/assets/images/packfood_img.png" />
+                    <img src="/assets/images/packfood_img.png" />
                   </a>
                 </div>
               </div>
               <div className="item">
                 <div className="followers-inner">
                   <a href="listing.html">
-                    <img src="/src/assets/images/foodstuff-img.png" />
+                    <img src="/assets/images/foodstuff-img.png" />
                   </a>
                 </div>
               </div>

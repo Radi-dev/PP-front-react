@@ -13,7 +13,7 @@ export default function HeaderComponent() {
                       href="index.html"
                       target="_blank"
                     >
-                      <img src="/src/assets/images/logo.svg" width="40px" />
+                      <img src="/assets/images/logo.svg" width="40px" />
                     </a>
                   </li>
                   <li className="d-inline-block">
@@ -37,7 +37,7 @@ export default function HeaderComponent() {
                               <li className="d-inline-block">
                                 <img
                                   className="seaarch-img"
-                                  src="/src/assets/images/search-img1.jpg"
+                                  src="/assets/images/search-img1.jpg"
                                   alt="search-img1"
                                 />
                               </li>
@@ -49,7 +49,7 @@ export default function HeaderComponent() {
                               <li className="d-inline-block">
                                 <img
                                   className="seaarch-img"
-                                  src="/src/assets/images/search-img2.jpg"
+                                  src="/assets/images/search-img2.jpg"
                                   alt="search-img1"
                                 />
                               </li>
@@ -61,7 +61,7 @@ export default function HeaderComponent() {
                               <li className="d-inline-block">
                                 <img
                                   className="seaarch-img"
-                                  src="/src/assets/images/search-img1.jpg"
+                                  src="/assets/images/search-img1.jpg"
                                   alt="search-img1"
                                 />
                               </li>
@@ -77,7 +77,7 @@ export default function HeaderComponent() {
                               <li className="d-inline-block">
                                 <img
                                   className="seaarch-list"
-                                  src="/src/assets/images/list-img1.jpg"
+                                  src="/assets/images/list-img1.jpg"
                                   alt="search-img1"
                                 />
                               </li>
@@ -284,14 +284,14 @@ export function HeaderComponentMobile() {
           <div className="justify-content-start">
             <img
               className="mobile-logo"
-              src="/src/assets/images/main-logo.svg"
+              src="/assets/images/main-logo.svg"
               alt="mobile-logo"
             />
           </div>
           <div className="ml-auto justify-content-end">
             <img
               className="profile-img"
-              src="/src/assets/images/profile_img.jpg"
+              src="/assets/images/profile_img.jpg"
               alt="profile-img"
             />
           </div>

@@ -150,7 +150,7 @@ export default function FoodItemsMobileSection({
                               </div>
                               <img
                                 className="product-img"
-                                src="/src/assets/images/MProducts-img2.png"
+                                src="/assets/images/MProducts-img2.png"
                                 alt="Product-img1"
                               />
                             </a>
@@ -176,28 +176,28 @@ export default function FoodItemsMobileSection({
                             <li className="d-inline-block pally-left">
                               <img
                                 className="list-img"
-                                src="/src/assets/images/list-img1.jpg"
+                                src="/assets/images/list-img1.jpg"
                                 alt="list-img1"
                               />
                             </li>
                             <li className="d-inline-block pally-left">
                               <img
                                 className="list-img"
-                                src="/src/assets/images/list-img3.jpg"
+                                src="/assets/images/list-img3.jpg"
                                 alt="list-img2"
                               />
                             </li>
                             <li className="d-inline-block pally-left">
                               <img
                                 className="list-img"
-                                src="/src/assets/images/list-img3.jpg"
+                                src="/assets/images/list-img3.jpg"
                                 alt="list-img3"
                               />
                             </li>
                             <li className="d-inline-block pally-left">
                               <img
                                 className="list-img"
-                                src="/src/assets/images/list-img1.jpg"
+                                src="/assets/images/list-img1.jpg"
                                 alt="list-img1"
                               />
                             </li>
@@ -228,7 +228,7 @@ export default function FoodItemsMobileSection({
                               </div>
                               <img
                                 className="product-img"
-                                src="/src/assets/images/MProducts-img3.png"
+                                src="/assets/images/MProducts-img3.png"
                                 alt="Product-img1"
                               />
                             </a>
@@ -254,28 +254,28 @@ export default function FoodItemsMobileSection({
                             <li className="d-inline-block pally-left">
                               <img
                                 className="list-img"
-                                src="/src/assets/images/list-img1.jpg"
+                                src="/assets/images/list-img1.jpg"
                                 alt="list-img1"
                               />
                             </li>
                             <li className="d-inline-block pally-left">
                               <img
                                 className="list-img"
-                                src="/src/assets/images/list-img3.jpg"
+                                src="/assets/images/list-img3.jpg"
                                 alt="list-img2"
                               />
                             </li>
                             <li className="d-inline-block pally-left">
                               <img
                                 className="list-img"
-                                src="/src/assets/images/list-img3.jpg"
+                                src="/assets/images/list-img3.jpg"
                                 alt="list-img3"
                               />
                             </li>
                             <li className="d-inline-block pally-left">
                               <img
                                 className="list-img"
-                                src="/src/assets/images/list-img1.jpg"
+                                src="/assets/images/list-img1.jpg"
                                 alt="list-img1"
                               />
                             </li>
@@ -314,7 +314,7 @@ export default function FoodItemsMobileSection({
                               </div>
                               <img
                                 className="product-img"
-                                src="/src/assets/images/MProducts-img5.png"
+                                src="/assets/images/MProducts-img5.png"
                                 alt="Product-img1"
                               />
                             </a>
@@ -401,7 +401,7 @@ export default function FoodItemsMobileSection({
                               </div>
                               <img
                                 className="product-img"
-                                src="/src/assets/images/MProducts-img2.png"
+                                src="/assets/images/MProducts-img2.png"
                                 alt="Product-img1"
                               />
                             </a>
@@ -498,7 +498,7 @@ export default function FoodItemsMobileSection({
                                 </div>
                                 <img
                                   className="mb-3 product-img"
-                                  src="/src/assets/images/MPre-order1.png"
+                                  src="/assets/images/MPre-order1.png"
                                   alt="Pre-order1"
                                 />
                               </a>
@@ -557,7 +557,7 @@ export default function FoodItemsMobileSection({
                                 </div>
                                 <img
                                   className="mb-3 product-img"
-                                  src="/src/assets/images/MPre-order2.png"
+                                  src="/assets/images/MPre-order2.png"
                                   alt="Pre-order1"
                                 />
                               </a>
