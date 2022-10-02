@@ -344,15 +344,40 @@ export default function FoodItemsMobileSection({
                       hasMore={itemsCountTotal > foodItems.length}
                       loader={
                         [...Array(4)].map((item) => (
-                          <div key={item} className="col-md-6 col-lg-3">
-                            <div className="pally-inner ">
-                              <Shimmer
-                                className={
-                                  "class_name_test h-100 product-img mb3"
-                                }
-                              />
+                          <div className="d-flex mobile-product" key={item}>
+                            <div className=" justify-content-start">
+                              <div className="pally-inner">
+                                <Shimmer
+                                  className={
+                                    "class_name_test h-100 product-img"
+                                  }
+                                />
+                              </div>
+                            </div>
+
+                            <div className=" ml-2 justify-content-end">
+                              <div className="pally-content">
+                                <Shimmer />
+                                <Shimmer className={"w-50 "} />
+                                {/* <Shimmer /> */}
+                                <Shimmer className={"w-75 "} />
+                                <Shimmer />
+                                <div style={{ height: "2rem" }}>
+                                  <Shimmer className={"h-100 w-85"} />
+                                </div>
+                              </div>
                             </div>
                           </div>
+
+                          // <div key={item} className="col-md-6 col-lg-3">
+                          //   <div className="pally-inner ">
+                          //     <Shimmer
+                          //       className={
+                          //         "class_name_test h-100 product-img mb3"
+                          //       }
+                          //     />
+                          //   </div>
+                          // </div>
                         ))
                         // <div className="load-bg text-center mb-5 d-none d-lg-block">
                         //   <a href="#">
