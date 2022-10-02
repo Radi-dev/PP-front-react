@@ -1,21 +1,37 @@
+import { useEffect } from "react";
+import Shimmer from "react-js-loading-shimmer";
+
 export default function FoodItemsMobileSection({
   foodItems = [],
   itemsCountTotal = 0,
   fetching = false,
-  setFetching,
-  getRecommendedProducts,
+  setFetching = () => {
+    console.log("setFetching callback");
+  },
+  getRecommendedProducts = () => {
+    console.log("getRecommendedProducts callback");
+  },
   ...props
 }) {
-  //   <div className="" v-if="foodItems.value.length">
-  //  <h6 className="inner-head">
-  //    { foodItems.value.length } Available Deals
-  //  </h6>
-  //  <div className="row">
-  //    <div
-  //      className="col-md-6 col-lg-3"
-  //      v-for="(data, i) in foodItems.value"
-  //      :key="i"
-  //    >
+  useEffect(() => {
+    window.addEventListener("scroll", () => {
+      console.log(window.scrollY); //scrolled from top
+      console.log(window.innerHeight); //visible part of screen
+      if (
+        window.scrollY + window.innerHeight >=
+        document.documentElement.scrollHeight
+      ) {
+        getRecommendedProducts();
+      }
+    });
+
+    return () => {
+      window.removeEventListener("scroll", () => {
+        console.log("removed scroll");
+      });
+    };
+  }, []);
+
   return (
     <div className="fixed-food">
       <section className="food-items-bg  d-block d-lg-none mobilefoodTab-view">
@@ -301,182 +317,167 @@ export default function FoodItemsMobileSection({
                     role="tabpanel"
                     aria-labelledby="mobile-recommended-tab"
                   >
-                    <h6 className="inner-head mb-3 mt-3">16 Available Deals</h6>
-                    <div className="d-flex mobile-product">
-                      <div className=" justify-content-start">
-                        <div className="pally-inner">
-                          <div className="products-img-wrapper  mb-2 pointer">
-                            <a href="#">
-                              <div className="heart-icon">
-                                <span className="material-icons">
-                                  favorite_border
-                                </span>
-                              </div>
-                              <img
-                                className="product-img"
-                                src="/assets/images/MProducts-img5.png"
-                                alt="Product-img1"
+                    {!itemsCountTotal ? (
+                      <h6 className="inner-head mb-3 mt-3">
+                        Fetching Available Deals
+                      </h6>
+                    ) : (
+                      <h6 className="inner-head mb-3 mt-3">
+                        {itemsCountTotal} Available Deals
+                      </h6>
+                    )}
+
+                    {!foodItems.length
+                      ? [...Array(4)].map((item) => (
+                          <div key={item} className="col-md-6 col-lg-3">
+                            <div className="pally-inner ">
+                              <Shimmer
+                                className={
+                                  "class_name_test h-100 product-img mb3"
+                                }
                               />
-                            </a>
+                            </div>
                           </div>
-                        </div>
-                      </div>
-                      <div className=" ml-2 justify-content-end">
-                        <div className="pally-content">
-                          <a href="#" className="inner-head">
-                            <h5 className="mb-2">Titus 20kg (Full Carton) </h5>
-                          </a>
-                          <a href="#" className="green-bg">
-                            <span className="material-icons-outlined">
-                              arrow_right_alt
-                            </span>
-                            3% | In Season
-                          </a>
-                          <h5 className="mb-2 mt-2 font-weight-bold simhead">
-                            ₦73,000
-                            <s>(₦78,000)</s>
-                          </h5>
-                          <section className="rating-widget mb-2">
-                            <div
-                              className="rating-main pro-detail-star"
-                              data-vote="0"
-                            >
-                              <div className="mainstar hidden">
-                                <span className="full" data-value="0"></span>
-                                <span className="half" data-value="0"></span>
-                              </div>
-                              <div className="star">
-                                <span className="full" data-value="1"></span>
-                                <span className="half" data-value="0.5"></span>
-                                <span className="selected"></span>
-                              </div>
-                              <div className="star">
-                                <span className="full" data-value="2"></span>
-                                <span className="half" data-value="1.5"></span>
-                                <span className="selected"></span>
-                              </div>
-
-                              <div className="star">
-                                <span className="full" data-value="3"></span>
-                                <span className="half" data-value="2.5"></span>
-                                <span className="selected"></span>
-                              </div>
-
-                              <div className="star">
-                                <span className="full" data-value="4"></span>
-                                <span className="half" data-value="3.5"></span>
-                                <span className="selected"></span>
-                              </div>
-
-                              <div className="star">
-                                <span className="full" data-value="5"></span>
-                                <span className="half" data-value="4.5"></span>
-                                <span className="selected"></span>
+                        ))
+                      : foodItems.map((food, i) => (
+                          <div className="d-flex mobile-product" key={i}>
+                            <div className=" justify-content-start">
+                              <div className="pally-inner">
+                                <div className="products-img-wrapper  mb-2 pointer">
+                                  <a href="#">
+                                    <div className="heart-icon">
+                                      <span className="material-icons">
+                                        favorite_border
+                                      </span>
+                                    </div>
+                                    <img
+                                      className="product-img"
+                                      src={food.product_images}
+                                      alt={food.product_name}
+                                    />
+                                  </a>
+                                </div>
                               </div>
                             </div>
-                            <div className="success-box">
-                              <div className="text-message">(4.5/5.0)</div>
-                            </div>
-                          </section>
-                          <a href="#">
-                            <button
-                              type="button"
-                              className="brown-btn  text-uppercase btn-effects "
-                            >
-                              SELECT ORDER TYPE
-                            </button>
-                          </a>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="d-flex mobile-product">
-                      <div className=" justify-content-start">
-                        <div className="pally-inner">
-                          <div className="products-img-wrapper  mb-2 pointer">
-                            <a href="#">
-                              <div className="heart-icon">
-                                <span className="material-icons">
-                                  favorite_border
-                                </span>
+                            <div className=" ml-2 justify-content-end">
+                              <div className="pally-content">
+                                <a href="#" className="inner-head">
+                                  <h5 className="mb-2">
+                                  {food.product_name}
+                                  </h5>
+                                </a>
+                                <a href="#" className="green-bg">
+                                  <span className="material-icons-outlined">
+                                    arrow_right_alt
+                                  </span>
+                                  {food.is_season}% | In Season
+                                </a>
+                                <h5 className="mb-2 mt-2 font-weight-bold simhead">
+                                  ₦{food.product_discount > 0
+                                    ? (
+                                        food.product_price -
+                                        food.product_price /
+                                          food.product_discount
+                                      ).toFixed(2)
+                                    : food.product_price}
+                                  <s>
+                                    {food.product_discount > 0
+                                      ? `(${food.product_price})`
+                                      : ""}
+                                  </s>
+                                </h5>
+                                <section className="rating-widget mb-2">
+                                  <div
+                                    className="rating-main pro-detail-star"
+                                    data-vote="0"
+                                  >
+                                    <div className="mainstar hidden">
+                                      <span
+                                        className="full"
+                                        data-value="0"
+                                      ></span>
+                                      <span
+                                        className="half"
+                                        data-value="0"
+                                      ></span>
+                                    </div>
+                                    <div className="star">
+                                      <span
+                                        className="full"
+                                        data-value="1"
+                                      ></span>
+                                      <span
+                                        className="half"
+                                        data-value="0.5"
+                                      ></span>
+                                      <span className="selected"></span>
+                                    </div>
+                                    <div className="star">
+                                      <span
+                                        className="full"
+                                        data-value="2"
+                                      ></span>
+                                      <span
+                                        className="half"
+                                        data-value="1.5"
+                                      ></span>
+                                      <span className="selected"></span>
+                                    </div>
+
+                                    <div className="star">
+                                      <span
+                                        className="full"
+                                        data-value="3"
+                                      ></span>
+                                      <span
+                                        className="half"
+                                        data-value="2.5"
+                                      ></span>
+                                      <span className="selected"></span>
+                                    </div>
+
+                                    <div className="star">
+                                      <span
+                                        className="full"
+                                        data-value="4"
+                                      ></span>
+                                      <span
+                                        className="half"
+                                        data-value="3.5"
+                                      ></span>
+                                      <span className="selected"></span>
+                                    </div>
+
+                                    <div className="star">
+                                      <span
+                                        className="full"
+                                        data-value="5"
+                                      ></span>
+                                      <span
+                                        className="half"
+                                        data-value="4.5"
+                                      ></span>
+                                      <span className="selected"></span>
+                                    </div>
+                                  </div>
+                                  <div className="success-box">
+                                    <div className="text-message">
+                                      (4.5/5.0)
+                                    </div>
+                                  </div>
+                                </section>
+                                <a href="#">
+                                  <button
+                                    type="button"
+                                    className="brown-btn  text-uppercase btn-effects "
+                                  >
+                                    SELECT ORDER TYPE
+                                  </button>
+                                </a>
                               </div>
-                              <img
-                                className="product-img"
-                                src="/assets/images/MProducts-img2.png"
-                                alt="Product-img1"
-                              />
-                            </a>
+                            </div>
                           </div>
-                        </div>
-                      </div>
-                      <div className=" ml-2 justify-content-end">
-                        <div className="pally-content">
-                          <a href="#" className="inner-head">
-                            <h5 className="mb-2">Croaker Fish (Full Carton)</h5>
-                          </a>
-
-                          <a href="#" className="green-bg">
-                            <span className="material-icons-outlined">
-                              arrow_right_alt
-                            </span>
-                            3% | In Season
-                          </a>
-                          <h5 className="mb-2 mt-2 font-weight-bold simhead">
-                            ₦73,000
-                            <s>(₦78,000)</s>
-                          </h5>
-                          <section className="rating-widget mb-2">
-                            <div
-                              className="rating-main pro-detail-star"
-                              data-vote="0"
-                            >
-                              <div className="mainstar hidden">
-                                <span className="full" data-value="0"></span>
-                                <span className="half" data-value="0"></span>
-                              </div>
-                              <div className="star">
-                                <span className="full" data-value="1"></span>
-                                <span className="half" data-value="0.5"></span>
-                                <span className="selected"></span>
-                              </div>
-                              <div className="star">
-                                <span className="full" data-value="2"></span>
-                                <span className="half" data-value="1.5"></span>
-                                <span className="selected"></span>
-                              </div>
-
-                              <div className="star">
-                                <span className="full" data-value="3"></span>
-                                <span className="half" data-value="2.5"></span>
-                                <span className="selected"></span>
-                              </div>
-
-                              <div className="star">
-                                <span className="full" data-value="4"></span>
-                                <span className="half" data-value="3.5"></span>
-                                <span className="selected"></span>
-                              </div>
-
-                              <div className="star">
-                                <span className="full" data-value="5"></span>
-                                <span className="half" data-value="4.5"></span>
-                                <span className="selected"></span>
-                              </div>
-                            </div>
-                            <div className="success-box">
-                              <div className="text-message"></div>
-                            </div>
-                          </section>
-                          <a href="#">
-                            <button
-                              type="button"
-                              className="brown-btn  text-uppercase btn-effects "
-                            >
-                              SELECT ORDER TYPE
-                            </button>
-                          </a>
-                        </div>
-                      </div>
-                    </div>
+                        ))}
                   </div>
                   <div
                     className="tab-pane fade preorder-bg"
@@ -605,13 +606,16 @@ export default function FoodItemsMobileSection({
                     </div>
                   </div>
                 </div>
+                {!foodItems.length || foodItems.length === itemsCountTotal ? (
+              ""
+            ) : 
                 <div className="load-bg text-center mb-5 d-none d-lg-block">
                   <a href="#">
                     <button typ="button" className="load-more text-uppercase ">
                       Load more items
                     </button>
                   </a>
-                </div>
+                </div>}
               </div>
             </div>
           </div>

@@ -4,7 +4,7 @@ import HeaderComponent from "./components/HeaderComponent";
 import HeroSection from "./components/HeroSection";
 import CategoriesSection from "./components/CategoriesSection";
 import FoodItemsSection from "./components/FoodItemsSection";
-import FoodItemsMobileSection from "./components/FoodItemsMobileSection";
+// import FoodItemsMobileSection from "./components/FoodItemsMobileSection";
 import PartnerAndMedia from "./components/PartnerAndMedia";
 import DownloadAppSection from "./components/DownloadAppSection";
 import DownloadBottomSection from "./components/DownloadBottomSection";
@@ -21,7 +21,7 @@ function App() {
       <HeroSection />
       <CategoriesSection />
       <FoodItemsSection />
-      <FoodItemsMobileSection />
+      {/* <FoodItemsMobileSection /> */}
       <PartnerAndMedia />
       <DownloadAppSection />
       <DownloadBottomSection />

@@ -2,11 +2,15 @@ import { AxiosGet, AxiosPost } from "../services/useAxios";
 import conf from "../config.json";
 import { useEffect, useState } from "react";
 import Shimmer from "react-js-loading-shimmer";
+import { useMediaQuery } from "react-responsive";
+
+import FoodItemsMobileSection from "./FoodItemsMobileSection";
 function FoodItemsSection() {
   const [foodItems, setFoodItems] = useState([]);
   const [itemsCountTotal, setItemsCountTotal] = useState(0);
   const [offset, setOffset] = useState(0);
   const [fetching, setFetching] = useState(false);
+  const isMobile = useMediaQuery({ query: `(max-width: 991px)` });
   const getRecommendedProducts = () => {
     // console.log("getting prods", offset);
     setFetching(true);
@@ -35,7 +39,15 @@ function FoodItemsSection() {
     console.log("offset new lent", offset);
   }, [foodItems]);
 
-  return (
+  return isMobile ? (
+    <FoodItemsMobileSection
+      foodItems={foodItems}
+      itemsCountTotal={itemsCountTotal}
+      fetching={fetching}
+      setFetching={setFetching}
+      getRecommendedProducts={getRecommendedProducts}
+    />
+  ) : (
     <section className="food-items-bg  d-none d-lg-block webfoodTab-view">
       <div className="container">
         <div className="row">
