@@ -10,7 +10,7 @@ export default function HeroSection() {
                   <h6>Refer & Earn</h6>
                   <p>Invite a friend now</p>
                   <div className="home-list-img">
-                    <img src="/src/assets/images/refer-money.svg" />
+                    <img src="src/assets/images/refer-money.svg" />
                   </div>
                 </div>
               </a>
@@ -19,7 +19,7 @@ export default function HeroSection() {
                   <h6>Make a list</h6>
                   <p>Shop faster now</p>
                   <div className="home-list-img">
-                    <img src="/src/assets/images/list.svg" />
+                    <img src="src/assets/images/list.svg" />
                   </div>
                 </div>
               </a>
@@ -46,35 +46,35 @@ export default function HeroSection() {
                 <div className="carousel-item active">
                   <img
                     className="d-block w-100"
-                    src="/src/assets/images/slider1.jpg"
+                    src="src/assets/images/slider1.jpg"
                     alt="slider1.jpg"
                   />
                 </div>
                 <div className="carousel-item">
                   <img
                     className="d-block w-100"
-                    src="/src/assets/images/slider2.jpg"
+                    src="src/assets/images/slider2.jpg"
                     alt="slider2.jpg"
                   />
                 </div>
                 <div className="carousel-item">
                   <img
                     className="d-block w-100"
-                    src="/src/assets/images/slider1.jpg"
+                    src="src/assets/images/slider1.jpg"
                     alt="slider1.jpg"
                   />
                 </div>
                 <div className="carousel-item">
                   <img
                     className="d-block w-100"
-                    src="/src/assets/images/slider2.jpg"
+                    src="src/assets/images/slider2.jpg"
                     alt="slider2.jpg"
                   />
                 </div>
                 <div className="carousel-item">
                   <img
                     className="d-block w-100"
-                    src="/src/assets/images/slider1.jpg"
+                    src="src/assets/images/slider1.jpg"
                     alt="slider1.jpg"
                   />
                 </div>
@@ -91,19 +91,19 @@ export default function HeroSection() {
                             </ol>
                             <div className="carousel-inner">
                                 <div className="carousel-item active">
-                                    <img className="d-block w-100" src="/src/assets/images/slider1.jpg" alt="slider1.jpg"/>
+                                    <img className="d-block w-100" src="src/assets/images/slider1.jpg" alt="slider1.jpg"/>
                                 </div>
                                 <div className="carousel-item">
-                                    <img className="d-block w-100" src="/src/assets/images/slider2.jpg" alt="slider2.jpg"/>
+                                    <img className="d-block w-100" src="src/assets/images/slider2.jpg" alt="slider2.jpg"/>
                                 </div>
                                 <div className="carousel-item">
-                                    <img className="d-block w-100" src="/src/assets/images/slider1.jpg" alt="slider1.jpg"/>
+                                    <img className="d-block w-100" src="src/assets/images/slider1.jpg" alt="slider1.jpg"/>
                                 </div>
                                 <div className="carousel-item">
-                                    <img className="d-block w-100" src="/src/assets/images/slider2.jpg" alt="slider2.jpg"/>
+                                    <img className="d-block w-100" src="src/assets/images/slider2.jpg" alt="slider2.jpg"/>
                                 </div>
                                 <div className="carousel-item">
-                                    <img className="d-block w-100" src="/src/assets/images/slider1.jpg" alt="slider1.jpg"/>
+                                    <img className="d-block w-100" src="src/assets/images/slider1.jpg" alt="slider1.jpg"/>
                                 </div>
                             </div>
                         </div> --> */}
@@ -118,7 +118,7 @@ export default function HeroSection() {
                       <h6>Refer &amp; Earn</h6>
                       <p>Invite a friend now</p>
                       <div className="home-list-img">
-                        <img src="/src/assets/images/refer-money.svg" />
+                        <img src="src/assets/images/refer-money.svg" />
                       </div>
                     </div>
                   </a>
@@ -129,7 +129,7 @@ export default function HeroSection() {
                       <h6>Make a list</h6>
                       <p>Shop faster now</p>
                       <div className="home-list-img">
-                        <img src="/src/assets/images/list.svg" />
+                        <img src="src/assets/images/list.svg" />
                       </div>
                     </div>
                   </a>
