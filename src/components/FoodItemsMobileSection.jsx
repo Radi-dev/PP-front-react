@@ -339,7 +339,7 @@ export default function FoodItemsMobileSection({
                       </h6>
                     )}
                     <InfiniteScroll
-                      dataLength={itemsCountTotal} //This is important field to render the next data
+                      dataLength={foodItems.length} //This is important field to render the next data
                       next={getRecommendedProducts}
                       hasMore={itemsCountTotal > foodItems.length}
                       loader={
