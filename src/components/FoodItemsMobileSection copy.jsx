@@ -1,6 +1,5 @@
 import { useEffect } from "react";
 import Shimmer from "react-js-loading-shimmer";
-import InfiniteScroll from "react-infinite-scroll-component";
 
 export default function FoodItemsMobileSection({
   foodItems = [],
@@ -15,35 +14,35 @@ export default function FoodItemsMobileSection({
   },
   ...props
 }) {
-  // useEffect(() => {
-  //   console.log("added scroll");
-  //   window.addEventListener("scroll", () => {
-  //     // console.log(window.scrollY); //scrolled from top
-  //     // console.log(window.innerHeight); //visible part of screen
-  //     console.log(
-  //       window.scrollY + window.innerHeight,
-  //       document.documentElement.scrollHeight,
-  //       window.scrollY + window.innerHeight >=
-  //         document.documentElement.scrollHeight
-  //     ); //visible part of screen
-  //     if (
-  //       window.scrollY + window.innerHeight >=
-  //       document.documentElement.scrollHeight
-  //     ) {
-  //       fetching ? console.log("still fetching") : getRecommendedProducts();
-  //     }
-  //   });
-  //   if (!isMobile) {
-  //     window.removeEventListener("scroll", () => {
-  //       console.log("removed scroll");
-  //     });
-  //   }
-  //   return () => {
-  //     window.removeEventListener("scroll", () => {
-  //       console.log("removed scroll");
-  //     });
-  //   };
-  // });
+  useEffect(() => {
+    console.log("added scroll");
+    window.addEventListener("scroll", () => {
+      // console.log(window.scrollY); //scrolled from top
+      // console.log(window.innerHeight); //visible part of screen
+      console.log(
+        window.scrollY + window.innerHeight,
+        document.documentElement.scrollHeight,
+        window.scrollY + window.innerHeight >=
+          document.documentElement.scrollHeight
+      ); //visible part of screen
+      if (
+        window.scrollY + window.innerHeight >=
+        document.documentElement.scrollHeight
+      ) {
+        fetching ? console.log("still fetching") : getRecommendedProducts();
+      }
+    });
+    if (!isMobile) {
+      window.removeEventListener("scroll", () => {
+        console.log("removed scroll");
+      });
+    }
+    return () => {
+      window.removeEventListener("scroll", () => {
+        console.log("removed scroll");
+      });
+    };
+  });
 
   return (
     <div className="fixed-food">
@@ -58,6 +57,7 @@ export default function FoodItemsMobileSection({
                   data-toggle="modal"
                   data-target="#fillter-modal"
                 >
+                  {" "}
                   <span className="material-icons align-top pr-2">
                     filter_list
                   </span>
@@ -329,173 +329,7 @@ export default function FoodItemsMobileSection({
                     role="tabpanel"
                     aria-labelledby="mobile-recommended-tab"
                   >
-                    <InfiniteScroll
-                      dataLength={itemsCountTotal} //This is important field to render the next data
-                      next={getRecommendedProducts}
-                      hasMore={itemsCountTotal > foodItems.length}
-                      loader={
-                        "hhh"
-                        // <div className="load-bg text-center mb-5 d-none d-lg-block">
-                        //   <a href="#">
-                        //     <button
-                        //       typ="button"
-                        //       className="load-more text-uppercase "
-                        //     >
-                        //       Load more items
-                        //     </button>
-                        //   </a>
-                        // </div>
-                      }
-                      endMessage={""}
-                      // below props only if you need pull down functionality
-
-                      // refreshFunction={this.refresh}
-                      // pullDownToRefresh
-                      // pullDownToRefreshThreshold={50}
-                      // pullDownToRefreshContent={
-                      //   <h3 style={{ textAlign: 'center' }}>&#8595; Pull down to refresh</h3>
-                      // }
-                      // releaseToRefreshContent={
-                      //   <h3 style={{ textAlign: 'center' }}>&#8593; Release to refresh</h3>
-                      // }
-                    >
-                      {foodItems.map((food, i) => (
-                        <div className="d-flex mobile-product" key={i}>
-                          <div className=" justify-content-start">
-                            <div className="pally-inner">
-                              <div className="products-img-wrapper  mb-2 pointer">
-                                <a href="#">
-                                  <div className="heart-icon">
-                                    <span className="material-icons">
-                                      favorite_border
-                                    </span>
-                                  </div>
-                                  <img
-                                    className="product-img"
-                                    src={food.product_images}
-                                    alt={food.product_name}
-                                  />
-                                </a>
-                              </div>
-                            </div>
-                          </div>
-                          <div className=" ml-2 justify-content-end">
-                            <div className="pally-content">
-                              <a href="#" className="inner-head">
-                                <h5 className="mb-2">{food.product_name}</h5>
-                              </a>
-                              <a href="#" className="green-bg">
-                                <span className="material-icons-outlined">
-                                  arrow_right_alt
-                                </span>
-                                {food.is_season}% | In Season
-                              </a>
-                              <h5 className="mb-2 mt-2 font-weight-bold simhead">
-                                ₦
-                                {food.product_discount > 0
-                                  ? (
-                                      food.product_price -
-                                      food.product_price / food.product_discount
-                                    ).toFixed(2)
-                                  : food.product_price}
-                                <s>
-                                  {food.product_discount > 0
-                                    ? `(${food.product_price})`
-                                    : ""}
-                                </s>
-                              </h5>
-                              <section className="rating-widget mb-2">
-                                <div
-                                  className="rating-main pro-detail-star"
-                                  data-vote="0"
-                                >
-                                  <div className="mainstar hidden">
-                                    <span
-                                      className="full"
-                                      data-value="0"
-                                    ></span>
-                                    <span
-                                      className="half"
-                                      data-value="0"
-                                    ></span>
-                                  </div>
-                                  <div className="star">
-                                    <span
-                                      className="full"
-                                      data-value="1"
-                                    ></span>
-                                    <span
-                                      className="half"
-                                      data-value="0.5"
-                                    ></span>
-                                    <span className="selected"></span>
-                                  </div>
-                                  <div className="star">
-                                    <span
-                                      className="full"
-                                      data-value="2"
-                                    ></span>
-                                    <span
-                                      className="half"
-                                      data-value="1.5"
-                                    ></span>
-                                    <span className="selected"></span>
-                                  </div>
-
-                                  <div className="star">
-                                    <span
-                                      className="full"
-                                      data-value="3"
-                                    ></span>
-                                    <span
-                                      className="half"
-                                      data-value="2.5"
-                                    ></span>
-                                    <span className="selected"></span>
-                                  </div>
-
-                                  <div className="star">
-                                    <span
-                                      className="full"
-                                      data-value="4"
-                                    ></span>
-                                    <span
-                                      className="half"
-                                      data-value="3.5"
-                                    ></span>
-                                    <span className="selected"></span>
-                                  </div>
-
-                                  <div className="star">
-                                    <span
-                                      className="full"
-                                      data-value="5"
-                                    ></span>
-                                    <span
-                                      className="half"
-                                      data-value="4.5"
-                                    ></span>
-                                    <span className="selected"></span>
-                                  </div>
-                                </div>
-                                <div className="success-box">
-                                  <div className="text-message">(4.5/5.0)</div>
-                                </div>
-                              </section>
-                              <a href="#">
-                                <button
-                                  type="button"
-                                  className="brown-btn  text-uppercase btn-effects "
-                                >
-                                  SELECT ORDER TYPE
-                                </button>
-                              </a>
-                            </div>
-                          </div>
-                        </div>
-                      ))}
-                    </InfiniteScroll>
-                    {/* {!itemsCountTotal ? (
+                    {!itemsCountTotal ? (
                       <h6 className="inner-head mb-3 mt-3">
                         Fetching Available Deals
                       </h6>
@@ -654,7 +488,7 @@ export default function FoodItemsMobileSection({
                               </div>
                             </div>
                           </div>
-                        ))} */}
+                        ))}
                   </div>
                   <div
                     className="tab-pane fade preorder-bg"
@@ -783,7 +617,7 @@ export default function FoodItemsMobileSection({
                     </div>
                   </div>
                 </div>
-                {/* {!foodItems.length || foodItems.length === itemsCountTotal ? (
+                {!foodItems.length || foodItems.length === itemsCountTotal ? (
                   ""
                 ) : (
                   <div className="load-bg text-center mb-5 d-none d-lg-block">
@@ -796,7 +630,7 @@ export default function FoodItemsMobileSection({
                       </button>
                     </a>
                   </div>
-                )} */}
+                )}
               </div>
             </div>
           </div>
