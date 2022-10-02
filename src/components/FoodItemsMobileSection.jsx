@@ -344,12 +344,15 @@ export default function FoodItemsMobileSection({
                       hasMore={itemsCountTotal > foodItems.length}
                       loader={
                         [...Array(4)].map((item) => (
-                          <div className="d-flex mobile-product" key={item}>
-                            <div className=" justify-content-start">
-                              <div className="pally-inner">
+                          <div
+                            className="d-flex mobile-product w-75"
+                            key={item}
+                          >
+                            <div className=" justify-content-start w-50">
+                              <div className="pally-inner w-100">
                                 <Shimmer
                                   className={
-                                    "class_name_test h-100 product-img"
+                                    "class_name_test h-100 product-img w-100"
                                   }
                                 />
                               </div>
