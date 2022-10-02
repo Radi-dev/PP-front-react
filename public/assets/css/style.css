@@ -1168,13 +1168,13 @@ header .search-dropdown{
 
 
 .refer-bg {
-    background-image: url(../images/refer-bg.svg) !important;
+    background-image: url(/images/refer-bg.svg) !important;
     background-repeat: no-repeat !important;
     background-position: center !important;
     background-size: cover !important;
 }
 .list-make-bg{
-    background-image: url(../images/list-bg.svg) !important;
+    background-image: url(/images/list-bg.svg) !important;
     background-repeat: no-repeat !important;
     background-position: center !important;
     background-size: cover !important;
@@ -1413,7 +1413,7 @@ header .search-dropdown{
     position: absolute;
     width: 300px;
     height: 280px;
-    background-image: url(../images/city-img.svg);
+    background-image: url(/images/city-img.svg);
     right: -180px;
     top: -57px;
     background-repeat: no-repeat;
@@ -7374,7 +7374,7 @@ a.follower-icon:hover {
 /* -------- NOTIFICATION-PAGE-CSS-END -------- */
 /* ------- REFER AND EARN-PAGE-CSS-START -------- */
 .refer-wrapper {
-    background-image: url(../images/refer-img.png);
+    background-image: url(/images/refer-img.png);
     background-repeat: no-repeat;
     background-position: right;
     min-height: 500px;

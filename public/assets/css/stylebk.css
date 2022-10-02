@@ -3307,7 +3307,7 @@ a.follower-icon:hover {
 /* ------- REFER AND EARN-PAGE-CSS-START -------- */
 
 .refer-wrapper {
-    background-image: url(../images/refer-img.png);
+    background-image: url(/images/refer-img.png);
     background-repeat: no-repeat;
     background-position: right;
     min-height: 500px;
@@ -3976,7 +3976,7 @@ a.follower-icon:hover {
         margin: 0 0 100px 0;
     }
     .mobile-wallet-bg {
-        background-image: url(../images/MobWallet.png);
+        background-image: url(/images/MobWallet.png);
         background-size: 100% 100%;
         color: #fff;
         width: 80%;
