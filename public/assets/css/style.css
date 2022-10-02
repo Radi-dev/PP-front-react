@@ -8315,7 +8315,8 @@ a.follower-icon:hover {
     }
     .foodsticky-bg .tabs-fixed {
         position: fixed;
-        top: 85px;
+        /* top: 85px; */
+        top: 0;
         background: #fcf3ed;
         z-index: 99;
         max-width: 100%;
@@ -8379,6 +8380,7 @@ a.follower-icon:hover {
     }
     .spinner {
         display: inline-block;
+        display: none;
         font-size: 4em;
         height: 1em;
         line-height: 1;
