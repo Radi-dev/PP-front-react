@@ -61,22 +61,9 @@ function FoodItemsSection() {
                   id="foodTab"
                   role="tablist"
                 >
-                  <li className="nav-item ">
-                    <a
-                      className="nav-link active"
-                      id=""
-                      data-toggle="tab"
-                      href="#pally"
-                      role="tab"
-                      aria-controls="pally"
-                      aria-selected="true"
-                    >
-                      Shop
-                    </a>
-                  </li>
                   <li className="nav-item">
                     <a
-                      className="nav-link"
+                      className="nav-link active"
                       id="recommended-tab"
                       data-toggle="tab"
                       href="#recommended"
@@ -84,9 +71,23 @@ function FoodItemsSection() {
                       aria-controls="recommended"
                       aria-selected="false"
                     >
+                      Recommended
+                    </a>
+                  </li>
+                  <li className="nav-item ">
+                    <a
+                      className="nav-link"
+                      id=""
+                      data-toggle="tab"
+                      href="#pally"
+                      role="tab"
+                      aria-controls="pally"
+                      aria-selected="true"
+                    >
                       Pally
                     </a>
                   </li>
+
                   <li className="nav-item">
                     <a
                       className="nav-link"
@@ -97,7 +98,7 @@ function FoodItemsSection() {
                       aria-controls="pre-orders"
                       aria-selected="false"
                     >
-                      Recommended
+                      Shop
                     </a>
                   </li>
                 </ul>

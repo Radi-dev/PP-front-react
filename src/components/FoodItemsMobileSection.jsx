@@ -13,6 +13,9 @@ export default function FoodItemsMobileSection({
   },
   ...props
 }) {
+  //-------------Deprecated this part in favour of a 3rd party library
+  //-------------in order to improve performance
+
   // useEffect(() => {
   //   console.log("added scroll");
   //   window.addEventListener("scroll", () => {
@@ -38,6 +41,7 @@ export default function FoodItemsMobileSection({
   //   };
   // });
   const loadingPlaceholder = [...Array(4)].map((item) => (
+    //---------jsx array for the shimmer loading skeleton
     <div className="d-flex mobile-product w-75" key={item}>
       <div className=" justify-content-start w-50">
         <div className="pally-inner w-100">
