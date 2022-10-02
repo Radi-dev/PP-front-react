@@ -343,7 +343,17 @@ export default function FoodItemsMobileSection({
                       next={getRecommendedProducts}
                       hasMore={itemsCountTotal > foodItems.length}
                       loader={
-                        "..."
+                        [...Array(4)].map((item) => (
+                          <div key={item} className="col-md-6 col-lg-3">
+                            <div className="pally-inner ">
+                              <Shimmer
+                                className={
+                                  "class_name_test h-100 product-img mb3"
+                                }
+                              />
+                            </div>
+                          </div>
+                        ))
                         // <div className="load-bg text-center mb-5 d-none d-lg-block">
                         //   <a href="#">
                         //     <button
