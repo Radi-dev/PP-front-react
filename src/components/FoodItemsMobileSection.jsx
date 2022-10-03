@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import Shimmer from "react-js-loading-shimmer";
 import InfiniteScroll from "react-infinite-scroll-component";
 import ReactStars from "react-rating-stars-component";
+import MobileLoader from "./MobileLoader";
 
 export default function FoodItemsMobileSection({
   foodItems = [],
@@ -40,7 +41,7 @@ export default function FoodItemsMobileSection({
   //     });
   //   };
   // });
-  const loadingPlaceholder = [...Array(4)].map((item) => (
+  let loadingPlaceholder = [...Array(4)].map((item) => (
     //---------jsx array for the shimmer loading skeleton
     <div className="d-flex mobile-product w-75" key={item}>
       <div className=" justify-content-start w-50">
@@ -63,6 +64,7 @@ export default function FoodItemsMobileSection({
       </div>
     </div>
   ));
+  // loadingPlaceholder = <MobileLoader />;
   return (
     <div className="fixed-food">
       <section className="food-items-bg  d-block d-lg-none mobilefoodTab-view">
