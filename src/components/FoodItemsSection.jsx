@@ -6,6 +6,7 @@ import { useMediaQuery } from "react-responsive";
 import ReactStars from "react-rating-stars-component";
 
 import FoodItemsMobileSection from "./FoodItemsSectionMobile";
+import ImgOrAlt from "./imageOrAlt";
 function FoodItemsSection() {
   const [foodItems, setFoodItems] = useState([]);
   const [itemsCountTotal, setItemsCountTotal] = useState(0);
@@ -184,11 +185,17 @@ function FoodItemsSection() {
                                           favorite_border
                                         </span>
                                       </div>
-                                      <img
+                                      <ImgOrAlt
                                         className="mb-3 product-img"
+                                        placeholder="/assets/images/placeholder.png"
                                         src={food.product_images}
                                         alt={food.product_name}
                                       />
+                                      {/* <img
+                                        className="mb-3 product-img"
+                                        src={food.product_images}
+                                        alt={food.product_name}
+                                      /> */}
                                     </a>
                                   </div>
 

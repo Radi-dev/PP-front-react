@@ -3,6 +3,7 @@ import MobileSearchBar from "./MobileSearchBar";
 import { DebounceInput } from "react-debounce-input";
 import conf from "../config.json";
 import { AxiosPost } from "../services/useAxios";
+import ImgOrAlt from "./imageOrAlt";
 
 export default function HeaderComponent() {
   const [searchField, setSearchField] = useState("");
@@ -99,11 +100,17 @@ export default function HeaderComponent() {
                                         maxHeight: "25%",
                                       }}
                                     >
-                                      <img
-                                        className="seaarch-img"
+                                      <ImgOrAlt
+                                        className="search-img"
+                                        placeholder="/assets/images/placeholder.png"
                                         src={item.product_images}
                                         alt="search-img1"
                                       />
+                                      {/* <img
+                                        className="seaarch-img"
+                                        src={item.product_images}
+                                        alt="search-img1"
+                                      /> */}
                                     </li>
                                     <li className="d-inline-block">
                                       <h5>{item.product_name}</h5>

@@ -3,6 +3,7 @@ import Shimmer from "react-js-loading-shimmer";
 import InfiniteScroll from "react-infinite-scroll-component";
 import ReactStars from "react-rating-stars-component";
 import MobileLoader from "./MobileLoader";
+import ImgOrAlt from "./imageOrAlt";
 
 export default function FoodItemsMobileSection({
   foodItems = [],
@@ -374,11 +375,17 @@ export default function FoodItemsMobileSection({
                                       favorite_border
                                     </span>
                                   </div>
-                                  <img
+                                  <ImgOrAlt
                                     className="product-img"
+                                    placeholder="/assets/images/placeholder.png"
                                     src={food.product_images}
                                     alt={food.product_name}
                                   />
+                                  {/* <img
+                                    className="product-img"
+                                    src={food.product_images}
+                                    alt={food.product_name}
+                                  /> */}
                                 </a>
                               </div>
                             </div>

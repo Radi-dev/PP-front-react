@@ -1,4 +1,5 @@
 import { DebounceInput } from "react-debounce-input";
+import ImgOrAlt from "./imageOrAlt";
 
 export default function MobileSearchBar({
   searchField = "",
@@ -113,11 +114,17 @@ export default function MobileSearchBar({
                           <div key={i} className="justify-content-start pr-2">
                             <div style={{ maxWidth: "15%" }}>
                               {" "}
-                              <img
+                              <ImgOrAlt
                                 className="search-img"
+                                placeholder="/assets/images/placeholder.png"
                                 src={item.product_images}
                                 alt="search-img1"
                               />
+                              {/* <img
+                                className="search-img"
+                                src={item.product_images}
+                                alt="search-img1"
+                              /> */}
                             </div>
                           </div>
                           <div className="justify-content-end">
