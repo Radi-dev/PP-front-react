@@ -93,12 +93,7 @@ export default function HeaderComponent() {
                                 <h6 className="grey-text">FOOD ITEMS</h6>
                                 {searchItems.map((item, i) => (
                                   <ul key={i} className="list-unstyled mb-3">
-                                    <li
-                                      className="d-inline-block"
-                                      style={{
-                                        maxWidth: "25%",
-                                      }}
-                                    >
+                                    <li className="d-inline-block">
                                       <ImgOrAlt
                                         className="seaarch-img"
                                         placeholder="/assets/images/placeholder.png"
