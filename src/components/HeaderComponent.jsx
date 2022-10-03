@@ -1,4 +1,16 @@
+import { useState } from "react";
+import MobileSearchBar from "./MobileSearchBar";
+
 export default function HeaderComponent() {
+  const [searchField, setSearchField] = useState("");
+  const handleSearch = (field) => {
+    const fieldValue = field.target.value;
+    setSearchField(fieldValue);
+  };
+  const handleSearchButton = (e) => {
+    e.preventDefault();
+    setSearchField("");
+  };
   return (
     <div className="desktop-header">
       <header>
@@ -26,9 +38,16 @@ export default function HeaderComponent() {
                               type="text"
                               placeholder="Search Food Items or Users"
                               name="search"
+                              value={searchField}
+                              onChange={handleSearch}
                             />
                           </div>
-                          <button className="yellow-bg">SEARCH</button>
+                          <button
+                            className="yellow-bg"
+                            onClick={handleSearchButton}
+                          >
+                            SEARCH
+                          </button>
                         </div>
                         <div className="search-dropdown hidden" id="scrolling">
                           <div className="search-items">
@@ -316,6 +335,7 @@ export function HeaderComponentMobile() {
           </div>
         </div>
       </div>
+      <MobileSearchBar />
     </section>
   );
 }

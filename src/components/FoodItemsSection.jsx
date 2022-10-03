@@ -5,7 +5,7 @@ import Shimmer from "react-js-loading-shimmer";
 import { useMediaQuery } from "react-responsive";
 import ReactStars from "react-rating-stars-component";
 
-import FoodItemsMobileSection from "./FoodItemsMobileSection";
+import FoodItemsMobileSection from "./FoodItemsSectionMobile";
 function FoodItemsSection() {
   const [foodItems, setFoodItems] = useState([]);
   const [itemsCountTotal, setItemsCountTotal] = useState(0);

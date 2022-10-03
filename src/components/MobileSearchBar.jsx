@@ -87,7 +87,7 @@ export default function MobileSearchBar() {
                     <div className="justify-content-start pr-2">
                       <img
                         className="search-img"
-                        src="/src/assets/images/search-img1.jpg"
+                        src="/assets/images/search-img1.jpg"
                         alt="search-img1"
                       />
                     </div>
@@ -100,7 +100,7 @@ export default function MobileSearchBar() {
                     <div className="justify-content-start pr-2">
                       <img
                         className="search-img"
-                        src="/src/assets/images/search-img2.jpg"
+                        src="/assets/images/search-img2.jpg"
                         alt="search-img1"
                       />
                     </div>
@@ -121,7 +121,7 @@ export default function MobileSearchBar() {
                     <div className="p-2">
                       <img
                         className="follow-img"
-                        src="/src/assets/images/followers1.jpg"
+                        src="/assets/images/followers1.jpg"
                         alt="follwers-img1"
                       />
                     </div>
@@ -138,7 +138,7 @@ export default function MobileSearchBar() {
                     <div className="p-2">
                       <img
                         className="follow-img"
-                        src="/src/assets/images/followers1.jpg"
+                        src="/assets/images/followers1.jpg"
                         alt="follwers-img1"
                       />
                     </div>
