@@ -1,4 +1,11 @@
-export default function MobileSearchBar() {
+import { DebounceInput } from "react-debounce-input";
+
+export default function MobileSearchBar({
+  searchField = "",
+  searchItems = [],
+  handleSearchButton = () => {},
+  handleSearchField = () => {},
+}) {
   return (
     <section>
       <div
@@ -22,13 +29,25 @@ export default function MobileSearchBar() {
                       >
                         west
                       </i>
-                      <input
+                      <DebounceInput
+                        minLength={1}
+                        type="text"
+                        name="search"
+                        value={searchField}
+                        placeholder="Search"
+                        debounceTimeout={300}
+                        className="search-tabs align-top"
+                        onChange={handleSearchField}
+                      />
+                      {/* <input
                         type="text"
                         placeholder="Search"
                         className="search-tabs align-top"
-                      />
+                      /> */}
                     </span>
-                    <button className="yellow-bg">SEARCH</button>
+                    <button className="yellow-bg" onClick={handleSearchButton}>
+                      SEARCH
+                    </button>
                   </a>
                 </div>
                 <div className="ml-auto justify-content-end">
@@ -82,33 +101,30 @@ export default function MobileSearchBar() {
                   role="tabpanel"
                   aria-labelledby="Mobfood-tab-tab"
                 >
-                  <h6 className="result-found-wrap">2 Results</h6>
-                  <div className="d-flex mb-3">
-                    <div className="justify-content-start pr-2">
-                      <img
-                        className="search-img"
-                        src="/assets/images/search-img1.jpg"
-                        alt="search-img1"
-                      />
-                    </div>
-                    <div className="justify-content-end">
-                      <h6 className="">Tuwo Rice (50kg)</h6>
-                      {/* <!-- <h6>₦75,000</h6> --> */}
-                    </div>
-                  </div>
-                  <div className="d-flex mb-3">
-                    <div className="justify-content-start pr-2">
-                      <img
-                        className="search-img"
-                        src="/assets/images/search-img2.jpg"
-                        alt="search-img1"
-                      />
-                    </div>
-                    <div className="justify-content-end">
-                      <h6 className="">Titus 20kg (Full Carton)</h6>
-                      {/* <!-- <h6>₦75,000</h6> --> */}
-                    </div>
-                  </div>
+                  {!searchItems.length || !searchField ? (
+                    ""
+                  ) : (
+                    <>
+                      <h6 className="result-found-wrap">
+                        {searchItems.length} Results
+                      </h6>
+                      {searchItems.map((item, i) => (
+                        <div className="d-flex mb-3">
+                          <div key={i} className="justify-content-start pr-2">
+                            <img
+                              className="search-img"
+                              src={item.product_images}
+                              alt="search-img1"
+                            />
+                          </div>
+                          <div className="justify-content-end">
+                            <h6 className="">{item.product_name}</h6>
+                            {/* <!-- <h6>₦75,000</h6> --> */}
+                          </div>
+                        </div>
+                      ))}
+                    </>
+                  )}
                 </div>
                 <div
                   className="tab-pane fade payment-bg"
