@@ -1,16 +1,40 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import MobileSearchBar from "./MobileSearchBar";
+import { DebounceInput } from "react-debounce-input";
+import conf from "../config.json";
+import { AxiosPost } from "../services/useAxios";
 
 export default function HeaderComponent() {
   const [searchField, setSearchField] = useState("");
-  const handleSearch = (field) => {
+  const [searchItems, setSearchItems] = useState([]);
+  const searchWhatsappProducts = () => {
+    console.log("getting prods", searchField);
+    const _payload = { keyword: searchField, user_id: "x" };
+    return AxiosPost(conf.base_url + "/whatsappSearchFoodItems", _payload, {
+      region: conf.region,
+    }).then((res) => {
+      console.log("data", res);
+      res?.data?.status
+        ? setSearchItems([...res?.data?.fooditems])
+        : console.log();
+      // setFetching(false);
+    });
+  };
+
+  const handleSearchField = (field) => {
     const fieldValue = field.target.value;
+    !fieldValue ? setSearchItems([]) : console.log();
     setSearchField(fieldValue);
   };
   const handleSearchButton = (e) => {
     e.preventDefault();
     setSearchField("");
+    setSearchItems([]);
   };
+  useEffect(() => {
+    searchWhatsappProducts();
+  }, [searchField]);
+
   return (
     <div className="desktop-header">
       <header>
@@ -34,13 +58,23 @@ export default function HeaderComponent() {
                         <div className="outer_search">
                           <div className="saerch-bar" id="search_bars">
                             <span className="material-icons"> search </span>
-                            <input
+                            <DebounceInput
+                              minLength={1}
+                              type="text"
+                              name="search"
+                              value={searchField}
+                              placeholder="Search Food Items or Users"
+                              debounceTimeout={300}
+                              onChange={handleSearchField}
+                            />
+
+                            {/* <input
                               type="text"
                               placeholder="Search Food Items or Users"
                               name="search"
                               value={searchField}
-                              onChange={handleSearch}
-                            />
+                              onChange={handleSearchField}
+                            /> */}
                           </div>
                           <button
                             className="yellow-bg"
@@ -49,63 +83,45 @@ export default function HeaderComponent() {
                             SEARCH
                           </button>
                         </div>
-                        <div className="search-dropdown hidden" id="scrolling">
-                          <div className="search-items">
-                            <h6 className="grey-text">FOOD ITEMS</h6>
-                            <ul className="list-unstyled mb-3">
-                              <li className="d-inline-block">
-                                <img
-                                  className="seaarch-img"
-                                  src="/assets/images/search-img1.jpg"
-                                  alt="search-img1"
-                                />
-                              </li>
-                              <li className="d-inline-block">
-                                <h5>Tuwo Rice (25kg)</h5>
-                              </li>
-                            </ul>
-                            <ul className="list-unstyled mb-3">
-                              <li className="d-inline-block">
-                                <img
-                                  className="seaarch-img"
-                                  src="/assets/images/search-img2.jpg"
-                                  alt="search-img1"
-                                />
-                              </li>
-                              <li className="d-inline-block">
-                                <h5>Tuwo Rice (50kg)</h5>
-                              </li>
-                            </ul>
-                            <ul className="list-unstyled mb-3">
-                              <li className="d-inline-block">
-                                <img
-                                  className="seaarch-img"
-                                  src="/assets/images/search-img1.jpg"
-                                  alt="search-img1"
-                                />
-                              </li>
-                              <li className="d-inline-block">
-                                <h5>Tuwo Rice (25kg)</h5>
-                              </li>
-                            </ul>
-                          </div>
-                          <div className="search-users">
-                            <h6 className="grey-text">Users</h6>
+                        {!searchItems.length || !searchField ? (
+                          ""
+                        ) : (
+                          <div className="search-dropdown" id="scrolling">
+                            <div className="search-items">
+                              <h6 className="grey-text">FOOD ITEMS</h6>
+                              {searchItems.map((item, i) => (
+                                <ul className="list-unstyled mb-3">
+                                  <li className="d-inline-block">
+                                    <img
+                                      className="seaarch-img"
+                                      src={item.product_images}
+                                      alt="search-img1"
+                                    />
+                                  </li>
+                                  <li className="d-inline-block">
+                                    <h5>{item.product_name}</h5>
+                                  </li>
+                                </ul>
+                              ))}
+                            </div>
+                            <div className="search-users">
+                              <h6 className="grey-text">Users</h6>
 
-                            <ul className="list-unstyled mb-3">
-                              <li className="d-inline-block">
-                                <img
-                                  className="seaarch-list"
-                                  src="/assets/images/list-img1.jpg"
-                                  alt="search-img1"
-                                />
-                              </li>
-                              <li className="d-inline-block">
-                                <h5>Tumininu Tayo</h5>
-                              </li>
-                            </ul>
+                              <ul className="list-unstyled mb-3">
+                                <li className="d-inline-block">
+                                  <img
+                                    className="seaarch-list"
+                                    src="/assets/images/list-img1.jpg"
+                                    alt="search-img1"
+                                  />
+                                </li>
+                                <li className="d-inline-block">
+                                  <h5>Tumininu Tayo</h5>
+                                </li>
+                              </ul>
+                            </div>
                           </div>
-                        </div>
+                        )}
                       </form>
                     </div>
                   </li>
