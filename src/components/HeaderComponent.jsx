@@ -97,11 +97,10 @@ export default function HeaderComponent() {
                                       className="d-inline-block"
                                       style={{
                                         maxWidth: "25%",
-                                        maxHeight: "25%",
                                       }}
                                     >
                                       <ImgOrAlt
-                                        className="search-img"
+                                        className="seaarch-img"
                                         placeholder="/assets/images/placeholder.png"
                                         src={item.product_images}
                                         alt="search-img1"
