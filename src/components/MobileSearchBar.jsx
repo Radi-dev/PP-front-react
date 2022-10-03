@@ -111,11 +111,14 @@ export default function MobileSearchBar({
                       {searchItems.map((item, i) => (
                         <div className="d-flex mb-3">
                           <div key={i} className="justify-content-start pr-2">
-                            <img
-                              className="search-img"
-                              src={item.product_images}
-                              alt="search-img1"
-                            />
+                            <div style={{ maxWidth: "15%" }}>
+                              {" "}
+                              <img
+                                className="search-img"
+                                src={item.product_images}
+                                alt="search-img1"
+                              />
+                            </div>
                           </div>
                           <div className="justify-content-end">
                             <h6 className="">{item.product_name}</h6>
